@@ -5,29 +5,29 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-PrimeiroProjeto", "1-PrimeiroProjeto\1-PrimeiroProjeto.csproj", "{C16FFB2D-58BE-4349-BA52-30D7F2729280}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-CriandoVariaveis", "..\2-CriandoVariaveis\2-CriandoVariaveis.csproj", "{042BAEC3-DF65-4309-81AD-849AE654E1A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-CriandoVariaveis", "2-CriandoVariaveis\2-CriandoVariaveis.csproj", "{042BAEC3-DF65-4309-81AD-849AE654E1A9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-CriandoVariaveisPontoFlutuante", "..\3-CriandoVariaveisPontoFlutuante\3-CriandoVariaveisPontoFlutuante.csproj", "{D0D79C5A-C7EE-431D-9AB2-6EEBC31339DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-CriandoVariaveisPontoFlutuante", "3-CriandoVariaveisPontoFlutuante\3-CriandoVariaveisPontoFlutuante.csproj", "{D0D79C5A-C7EE-431D-9AB2-6EEBC31339DD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-ConversoesEOutrosTiposNumericos", "..\4-ConversoesEOutrosTiposNumericos\4-ConversoesEOutrosTiposNumericos.csproj", "{460C449D-3D98-429C-AA3B-F64E4A507FA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-ConversoesEOutrosTiposNumericos", "4-ConversoesEOutrosTiposNumericos\4-ConversoesEOutrosTiposNumericos.csproj", "{460C449D-3D98-429C-AA3B-F64E4A507FA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5-CaracteresETextos", "..\5-CaracteresETextos\5-CaracteresETextos.csproj", "{64A6DC92-297D-4540-90BF-AE5647DEBB3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5-CaracteresETextos", "5-CaracteresETextos\5-CaracteresETextos.csproj", "{64A6DC92-297D-4540-90BF-AE5647DEBB3A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6-AtribuicoesDeVariaveis", "..\6-AtribuicoesDeVariaveis\6-AtribuicoesDeVariaveis.csproj", "{3DE8DBEA-7DD8-47B0-8BC8-AD0A0595E4D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6-AtribuicoesDeVariaveis", "6-AtribuicoesDeVariaveis\6-AtribuicoesDeVariaveis.csproj", "{3DE8DBEA-7DD8-47B0-8BC8-AD0A0595E4D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-Condicionais", "..\7-Condicionais\7-Condicionais.csproj", "{962748FB-74C8-4E5A-8A1A-2331A9905F96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-Condicionais", "7-Condicionais\7-Condicionais.csproj", "{962748FB-74C8-4E5A-8A1A-2331A9905F96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-Condicionais2", "..\8-Condicionais2\8-Condicionais2.csproj", "{E0CB13D9-8E87-41A9-A6EC-DC687FBB4822}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-Condicionais2", "8-Condicionais2\8-Condicionais2.csproj", "{E0CB13D9-8E87-41A9-A6EC-DC687FBB4822}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9-Escopo", "..\9-Escopo\9-Escopo.csproj", "{028376A7-245D-4CC6-948D-2038AB285EFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9-Escopo", "9-Escopo\9-Escopo.csproj", "{028376A7-245D-4CC6-948D-2038AB285EFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10-CalculaPoupanca", "..\P10-CalculaPoupanca\P10-CalculaPoupanca.csproj", "{7A1EF13B-863C-48F2-A51E-188CF1A89D0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10-CalculaPoupanca", "P10-CalculaPoupanca\P10-CalculaPoupanca.csproj", "{7A1EF13B-863C-48F2-A51E-188CF1A89D0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11_CalculaPoupanca2", "..\P11_CalculaPoupanca2\P11_CalculaPoupanca2.csproj", "{D74DD890-68D3-4761-B3DE-FD7B59C0FABD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11_CalculaPoupanca2", "P11_CalculaPoupanca2\P11_CalculaPoupanca2.csproj", "{D74DD890-68D3-4761-B3DE-FD7B59C0FABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P12-CalculaInvestimentoLongo", "..\P12-CalculaInvestimentoLongo\P12-CalculaInvestimentoLongo.csproj", "{EE373E66-CC4A-4687-B32F-DE11E7ADE48B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P12-CalculaInvestimentoLongo", "P12-CalculaInvestimentoLongo\P12-CalculaInvestimentoLongo.csproj", "{EE373E66-CC4A-4687-B32F-DE11E7ADE48B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P13. ForEncadeado", "..\P13. ForEncadeado\P13. ForEncadeado.csproj", "{1F960B61-B048-4A8A-A7E8-17C6AA122538}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P13. ForEncadeado", "P13. ForEncadeado\P13. ForEncadeado.csproj", "{1F960B61-B048-4A8A-A7E8-17C6AA122538}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
