@@ -1,9 +1,12 @@
 ﻿
+using ByteBank.Sistemas;
+
 namespace ByteBank.Funcionarios {
-    class Diretor : Funcionario {
-        public Diretor(string cpf, double salario) : base(cpf, salario) {
+    public class Diretor : Autenticavel {
+        public Diretor(string cpf, double salario) : base(salario, cpf) {
 
         }
+
         public override double GetBonificacao() {
             return Salario * 0.5;
         }
