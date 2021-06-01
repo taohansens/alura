@@ -2,8 +2,8 @@
 using ByteBank.Sistemas;
 
 namespace ByteBank.Funcionarios {
-    public class Diretor : Autenticavel {
-        public Diretor(string cpf, double salario) : base(salario, cpf) {
+    public class Diretor : FuncionarioAutenticavel {
+        public Diretor(string cpf) : base(5000, cpf) {
 
         }
 
