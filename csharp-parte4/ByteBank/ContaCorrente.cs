@@ -21,8 +21,6 @@ namespace ByteBank {
             Agencia = agencia;
             Numero = numero;
 
-            TaxaOperacao = 30 / TotalDeContasCriadas;
-
             TotalDeContasCriadas++;
         }
 
@@ -45,27 +43,30 @@ namespace ByteBank {
             }
         }
 
-        public bool Sacar(double valor) {
-            if (_saldo < valor) {
-                return false;
+        public void Sacar(double valor) {
+            if (valor < 0) {
+                throw new ArgumentException("Valor inválido para o saque", nameof(valor));
             }
-
+            if (_saldo < valor) {
+                throw new SaldoInsuficienteException(_saldo, valor);
+            }
             _saldo -= valor;
-            return true;
         }
 
         public void Depositar(double valor) {
             _saldo += valor;
         }
 
-        public bool Transferir(double valor, ContaCorrente contaDestino) {
+        public void Transferir(double valor, ContaCorrente contaDestino) {
+            if (valor <= 0) {
+                throw new ArgumentException("Valor inválido para a transferência", nameof(valor));
+            }
+            
             if (_saldo < valor) {
-                return false;
             }
 
-            _saldo -= valor;
+            Sacar(valor);
             contaDestino.Depositar(valor);
-            return true;
         }
     }
 }
