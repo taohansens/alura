@@ -11,26 +11,31 @@ namespace ByteBank
         static void Main(string[] args)
         {
             try {
-                Metodo();
+                new ContaCorrente(0, 0);
             }
-            catch (NullReferenceException erro) {
-                Console.WriteLine(erro.StackTrace);
-                Console.WriteLine("Caiu nessa primeiro!");
+            catch (ArgumentException ae) {
+                Console.WriteLine("Argumento com problema: " + ae.ParamName);
+                
+                Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
+                Console.WriteLine(ae.Message);
             }
-            catch(Exception erro)
-            {
-                Console.WriteLine(erro.StackTrace);
-                Console.WriteLine("Aconteceu um erro!");
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
             }
             
-            try {
-                Dividir(4,0);
-            }
-            catch(DivideByZeroException erro)
-            {
-                Console.WriteLine(erro.StackTrace);
-                Console.WriteLine("Ops. Divisão por Zero!");
-            }
+            // try {
+            //     Metodo();
+            // }
+            // catch(DivideByZeroException e)
+            // {
+            //     Console.WriteLine(e.StackTrace);
+            //     Console.WriteLine("Não é possível divisão por zero");
+            // }
+            // catch(Exception e)
+            // {
+            //     Console.WriteLine(e.StackTrace);
+            //     Console.WriteLine("Ops. Divisão por Zero!");
+            // }
             
             Console.ReadLine();
         }

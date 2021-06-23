@@ -4,56 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank
-{
-    public class ContaCorrente
-    {
-        public static double TaxaOperacao { get; private set; }
-
-        public static int TotalDeContasCriadas { get; private set; }
-
-        public Cliente Titular { get; set; }
-
-        public int Numero { get; set; }
-
-        private int _agencia;
-        public int Agencia
-        {
-            get
-            {
-                return _agencia;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    return;
-                }
-
-                _agencia = value;
-            }
-        }
-
+namespace ByteBank {
+    public class ContaCorrente {
         private double _saldo = 100;
-        public double Saldo
-        {
-            get
-            {
-                return _saldo;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    return;
-                }
 
-                _saldo = value;
+        public ContaCorrente(int agencia, int numero) {
+            if (agencia <= 0) {
+                ArgumentException excecao = new ArgumentException("A agência da conta deve ser maior que 0.", nameof(agencia));
+                throw excecao;
             }
-        }
+            if (numero <= 0) {
+                ArgumentException excecao = new ArgumentException("O número da conta deve ser maior que 0.", nameof(numero));
+                throw excecao;
+            }
 
-        public ContaCorrente(int agencia, int numero)
-        {
             Agencia = agencia;
             Numero = numero;
 
@@ -62,10 +26,27 @@ namespace ByteBank
             TotalDeContasCriadas++;
         }
 
-        public bool Sacar(double valor)
-        {
-            if (_saldo < valor)
-            {
+        public static double TaxaOperacao { get; private set; }
+
+        public static int TotalDeContasCriadas { get; private set; }
+
+        public Cliente Titular { get; set; }
+        public int Numero { get; }
+        public int Agencia { get; }
+
+        public double Saldo {
+            get { return _saldo; }
+            set {
+                if (value < 0) {
+                    return;
+                }
+
+                _saldo = value;
+            }
+        }
+
+        public bool Sacar(double valor) {
+            if (_saldo < valor) {
                 return false;
             }
 
@@ -73,15 +54,12 @@ namespace ByteBank
             return true;
         }
 
-        public void Depositar(double valor)
-        {
+        public void Depositar(double valor) {
             _saldo += valor;
         }
 
-        public bool Transferir(double valor, ContaCorrente contaDestino)
-        {
-            if (_saldo < valor)
-            {
+        public bool Transferir(double valor, ContaCorrente contaDestino) {
+            if (_saldo < valor) {
                 return false;
             }
 
