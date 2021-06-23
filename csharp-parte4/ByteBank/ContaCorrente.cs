@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,9 @@ namespace ByteBank {
         public static int TotalDeContasCriadas { get; private set; }
 
         public Cliente Titular { get; set; }
+
+        public int ContadorSaquesNaoPermitidos { get; private set; }
+        public int ContadorTransferenciasNaoPermitidos { get; private set; }
         public int Numero { get; }
         public int Agencia { get; }
 
@@ -48,6 +52,7 @@ namespace ByteBank {
                 throw new ArgumentException("Valor inválido para o saque", nameof(valor));
             }
             if (_saldo < valor) {
+                ContadorSaquesNaoPermitidos++;
                 throw new SaldoInsuficienteException(_saldo, valor);
             }
             _saldo -= valor;
@@ -61,8 +66,13 @@ namespace ByteBank {
             if (valor <= 0) {
                 throw new ArgumentException("Valor inválido para a transferência", nameof(valor));
             }
-            
-            if (_saldo < valor) {
+
+            try {
+                Sacar(valor);
+            }
+            catch (SaldoInsuficienteException ex) {
+                ContadorTransferenciasNaoPermitidos++;
+                throw new OperacaoFinanceiraException("Operação não realizada.", ex);
             }
 
             Sacar(valor);

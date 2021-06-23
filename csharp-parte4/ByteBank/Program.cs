@@ -10,12 +10,16 @@ namespace ByteBank {
             try {
                 var conta1 = new ContaCorrente(456, 13030);
                 conta1.Depositar(5000);
-                conta1.Sacar(500);
+                //conta1.Sacar(6000);
                 Console.WriteLine(conta1.Saldo);
                  
                 var conta2 = new ContaCorrente(452, 13130);
                 conta2.Depositar(5000);
-                conta2.Transferir(-10, conta1);
+                
+                // ArgumentExceptionm: Valor
+                //conta2.Transferir(-10, conta1);
+                conta2.Sacar(7000);
+                //conta2.Transferir(6000, conta1);
                 Console.WriteLine(conta1.Saldo);
 
             }
@@ -25,12 +29,18 @@ namespace ByteBank {
                 Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
                 Console.WriteLine(ae.Message);
             }
-            catch (SaldoInsuficienteException ex){
+            // catch (SaldoInsuficienteException ex){
+            //     //Console.WriteLine(ex.Saldo);
+            //     //Console.WriteLine(ex.ValorSaque);
+            //     Console.WriteLine(ex.Message);
+            //     Console.WriteLine("Exceção do tipo saldo insuficiente.");
+            // }
+            catch (OperacaoFinanceiraException ex) {
                 Console.WriteLine(ex.Message);
-                Console.WriteLine("Exceção do tipo saldo insuficiente.");
-            }
-            catch (Exception ex) {
-                Console.WriteLine(ex.Message);
+
+                Console.WriteLine("Informações InnerException: ");
+                Console.WriteLine(ex.InnerException);
+                Console.WriteLine(ex.StackTrace);
             }
 
             // try {
