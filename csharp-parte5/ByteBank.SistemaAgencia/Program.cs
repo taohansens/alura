@@ -1,15 +1,18 @@
 ﻿using System;
 using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
+using Humanizer;
 
 namespace ByteBank.SistemaAgencia {
     class Program {
         static void Main(string[] args) {
-            ContaCorrente conta = new ContaCorrente(847, 3356465);
-            //Teste Documentação
-            //conta.Sacar();
-            Console.WriteLine(conta.Numero);
-            Console.ReadLine();
+            DateTime dataFimPagamento = new DateTime(2021, 8, 17);
+            DateTime dataCorrente = DateTime.Now;
+
+            TimeSpan diferenca = dataFimPagamento - dataCorrente;
+            
+            Console.WriteLine(TimeSpanHumanizeExtensions.Humanize(diferenca));
         }
+        
     }
 }
