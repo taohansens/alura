@@ -7,7 +7,7 @@ namespace ByteBank.Modelos.Funcionarios {
             Salario *= 1.11;
         }
 
-        public override double GetBonificacao() {
+        protected internal override double GetBonificacao() {
             return Salario *= 0.17;
         }
     }
