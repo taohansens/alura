@@ -6,9 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ByteBank.Modelos {
+    /// <summary>
+    /// Define uma Conta corrente do banco ByteBank.
+    /// </summary>
     public class ContaCorrente {
         private double _saldo = 100;
 
+        /// <summary>
+        /// Cria uma instância de ContaCorrente com os argumentos utilizados.
+        /// </summary>
+        /// <param name="agencia">Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor maior que zero.</param>
+        /// <param name="numero">Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor maior que zero.</param>
+        /// <exception cref="ArgumentException"></exception>
         public ContaCorrente(int agencia, int numero) {
             if (agencia <= 0) {
                 ArgumentException excecao = new ArgumentException("A agência da conta deve ser maior que 0.", nameof(agencia));
@@ -47,6 +56,12 @@ namespace ByteBank.Modelos {
             }
         }
 
+        /// <summary>
+        /// Realiza o saque e atualiza o valor da propriedade <see cref="Saldo"/>
+        /// </summary>
+        /// <param name="valor">Representa o valor do saque, que deve ser maior que zero e menor que o <see cref="Saldo"/>.</param>
+        /// <exception cref="ArgumentException">Exceção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/></exception>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o valor de <paramref name="valor" /> for maior que o <see cref="Saldo"/></exception>
         public void Sacar(double valor) {
             if (valor < 0) {
                 throw new ArgumentException("Valor inválido para o saque", nameof(valor));
