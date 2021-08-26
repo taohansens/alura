@@ -5,6 +5,16 @@ using TaoBank.Models.Tools;
 namespace TaoBank {
     class Program {
         static void Main(string[] args) {
+            Lista<int> idades = new Lista<int>();
+
+            idades.Adicionar(5);
+            idades.AdicionarVarios(2, 54, 7, 32);
+
+            idades.EscreverListaNaTela();
+        }
+
+
+        static void Contas() {
             var rand = new Random();
 
             ListaDeContaCorrente lista = new();
@@ -36,8 +46,6 @@ namespace TaoBank {
             lista.Remover(new ContaCorrente(32, 1134));
             lista.EscreverListaNaTela();
         }
-
-
 
         static void TestaArrayContaCorrente() {
             ContaCorrente[] contas = new ContaCorrente[] {
