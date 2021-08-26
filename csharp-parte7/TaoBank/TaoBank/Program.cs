@@ -1,9 +1,22 @@
 ﻿using System;
 using TaoBank.Models;
+using TaoBank.Models.Tools;
 
 namespace TaoBank {
     class Program {
         static void Main(string[] args) {
+            var rand = new Random();
+
+            ListaDeContaCorrente lista = new();
+            int qtdContas = 10;
+            for(int i=0; i < qtdContas; i++) {
+                int agencia = rand.Next(999999);
+                int conta = rand.Next(999999);
+                lista.Adicionar(new ContaCorrente(agencia, conta));
+            }
+        }
+
+        static void TestaArrayContaCorrente() {
             ContaCorrente[] contas = new ContaCorrente[] {
             new ContaCorrente(0254, 5654645),
             new ContaCorrente(0254, 78412),
