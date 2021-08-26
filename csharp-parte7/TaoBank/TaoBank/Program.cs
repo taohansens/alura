@@ -10,10 +10,18 @@ namespace TaoBank {
             ListaDeContaCorrente lista = new();
             int qtdContas = 10;
             for(int i=0; i < qtdContas; i++) {
-                int agencia = rand.Next(999999);
-                int conta = rand.Next(999999);
+                int agencia = rand.Next(100);
+                int conta = rand.Next(9999);
                 lista.Adicionar(new ContaCorrente(agencia, conta));
             }
+
+            ContaCorrente contaTao = new ContaCorrente(23, 543);
+
+            lista.EscreverListaNaTela();
+            Console.WriteLine("======");
+            lista.Remover(contaTao);
+            Console.WriteLine("Removido");
+            lista.EscreverListaNaTela();
         }
 
         static void TestaArrayContaCorrente() {

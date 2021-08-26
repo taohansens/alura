@@ -9,11 +9,38 @@ namespace TaoBank.Models.Tools {
             _proxPosicao = 0;
         }
 
+        public void EscreverListaNaTela() {
+            for(int i = 0; i < _proxPosicao; i++) {
+                ContaCorrente conta = _itens[i];
+                System.Console.WriteLine($"Pos[{i}] - AG: {conta.Agencia} . CC: {conta.Numero}");
+            }
+        }
+
         public void Adicionar(ContaCorrente item) {
             VerificaCapacidade(_proxPosicao);
             System.Console.WriteLine($"Adicionando item na posição [{_proxPosicao}]");
             _itens[_proxPosicao] = item;
             _proxPosicao++;
+        }
+
+        public void Remover(ContaCorrente item) {
+            int indiceItem = -1;
+
+            for (int i = 0; i < _proxPosicao; i++) {
+                ContaCorrente itemAtual = _itens[i];
+
+                if (itemAtual.Equals(item)) {
+                    indiceItem = i;
+                    break;
+                }
+            }
+
+            for (int i = indiceItem; i < _proxPosicao-1; i++) {
+                _itens[i] = _itens[i + 1];
+            }
+
+            _proxPosicao--;
+            _itens[_proxPosicao] = null;
         }
 
         private void VerificaCapacidade(int tamanhoNecessario) {
@@ -22,7 +49,7 @@ namespace TaoBank.Models.Tools {
             }
 
             int novoTamanho = _itens.Length * 2;
-            if(novoTamanho < tamanhoNecessario) {
+            if (novoTamanho < tamanhoNecessario) {
                 novoTamanho = tamanhoNecessario;
             }
 
@@ -33,6 +60,6 @@ namespace TaoBank.Models.Tools {
             }
 
             _itens = novoArray;
-        }
+        } 
     }
 }
