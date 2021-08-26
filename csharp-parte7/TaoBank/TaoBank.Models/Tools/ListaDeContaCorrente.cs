@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace TaoBank.Models.Tools {
     public class ListaDeContaCorrente {
         private ContaCorrente[] _itens;
@@ -23,8 +25,22 @@ namespace TaoBank.Models.Tools {
             _proxPosicao++;
         }
 
+        public void AdicionarVarios(params ContaCorrente[] itens) {
+            foreach(ContaCorrente conta in itens) {
+                Adicionar(conta);
+            }
+        }
+
+        public ContaCorrente GetContaCorrenteIndice(int indice) {
+
+            if (indice < 0 || indice >= _proxPosicao) {
+                throw new ArgumentOutOfRangeException(nameof(indice));
+            }
+            return _itens[indice];
+        }
+
         public void Remover(ContaCorrente item) {
-            int indiceItem = -1;
+            int indiceItem = 0;
 
             for (int i = 0; i < _proxPosicao; i++) {
                 ContaCorrente itemAtual = _itens[i];
@@ -41,6 +57,12 @@ namespace TaoBank.Models.Tools {
 
             _proxPosicao--;
             _itens[_proxPosicao] = null;
+        }
+
+        public ContaCorrente this[int indice] {
+            get {
+                return GetContaCorrenteIndice(indice);
+            }
         }
 
         private void VerificaCapacidade(int tamanhoNecessario) {
@@ -60,6 +82,9 @@ namespace TaoBank.Models.Tools {
             }
 
             _itens = novoArray;
-        } 
+        }
+
+
+
     }
 }

@@ -9,7 +9,7 @@ namespace TaoBank {
 
             ListaDeContaCorrente lista = new();
             int qtdContas = 10;
-            for(int i=0; i < qtdContas; i++) {
+            for (int i = 0; i < qtdContas; i++) {
                 int agencia = rand.Next(100);
                 int conta = rand.Next(9999);
                 lista.Adicionar(new ContaCorrente(agencia, conta));
@@ -22,7 +22,22 @@ namespace TaoBank {
             lista.Remover(contaTao);
             Console.WriteLine("Removido");
             lista.EscreverListaNaTela();
+
+            Console.WriteLine("Imprimindo por index. [3]");
+            Console.WriteLine(lista[3].Agencia + " . " + lista[3].Numero);
+            Console.WriteLine("Params. Adicionando mais contas.");
+            lista.AdicionarVarios(
+                new ContaCorrente(32, 23456),
+                new ContaCorrente(32, 4356),
+                new ContaCorrente(32, 1134),
+                new ContaCorrente(32, 996457),
+                new ContaCorrente(32, 568745));
+
+            lista.Remover(new ContaCorrente(32, 1134));
+            lista.EscreverListaNaTela();
         }
+
+
 
         static void TestaArrayContaCorrente() {
             ContaCorrente[] contas = new ContaCorrente[] {
