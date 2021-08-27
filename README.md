@@ -21,6 +21,7 @@ Neste espaço estão armazenados os cursos que realizei na plataforma Alura, dis
 -  <a href="/csharp-parte4">**C# parte 4: Entendendo exceções**</a>
 -  <a href="/csharp-parte5">**C# parte 5: Bibliotecas DLLs, documentação e usando o NuGet**</a>
 -  <a href="/csharp-parte6">**C# parte 6: Strings, Regex e a classe Object**</a>
+-  <a href="/csharp-parte7">**C# parte 7: Array e tipos genéricos**</a>
 
 `Dentro de cada diretório há o README com o detalhamento e certificado do respectivo curso.`
 
