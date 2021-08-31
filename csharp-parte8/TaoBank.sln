@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaoBank.System", "TaoBank\TaoBank.System.csproj", "{AC6E1875-913C-417D-8432-41FD647509D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaoBank.Models", "TaoBank.Models\TaoBank.Models.csproj", "{F98897C1-74CE-49FB-A2A8-CB40B5F2A854}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC6E1875-913C-417D-8432-41FD647509D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6E1875-913C-417D-8432-41FD647509D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6E1875-913C-417D-8432-41FD647509D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6E1875-913C-417D-8432-41FD647509D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F98897C1-74CE-49FB-A2A8-CB40B5F2A854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98897C1-74CE-49FB-A2A8-CB40B5F2A854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98897C1-74CE-49FB-A2A8-CB40B5F2A854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98897C1-74CE-49FB-A2A8-CB40B5F2A854}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C2FBF26-4251-4186-BE9E-BBA113EDB896}
+	EndGlobalSection
+EndGlobal
