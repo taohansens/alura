@@ -16,8 +16,8 @@ namespace TaoBank {
 
             idades.Remove(5);
 
-            // Extend from ListExtensoes
-            idades.AdicionarVarios(33, 44, 88);
+            // Extend from ListExtensoes Generics
+            idades.AdicionarVarios(33, 44, 88,69);
 
             Console.WriteLine(idades);
 

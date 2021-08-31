@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TaoBank.System {
     public static class ListExtensoes {
-        public static void AdicionarVarios(this List<int> listaDeInteiros, params int[] itens) {
-            foreach(int item in itens) {
-                listaDeInteiros.Add(item);
+        public static void AdicionarVarios<T>(this List<T> lista, params T[] itens) {
+            foreach(T item in itens) {
+                lista.Add(item);
             }
         }
     }
