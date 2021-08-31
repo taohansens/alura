@@ -4,6 +4,7 @@ using TaoBank.Models;
 using TaoBank.Models.Tools;
 using TaoBank.System;
 using TaoBank.Models.Comparadores;
+using System.Linq;
 
 namespace TaoBank {
     class Program {
@@ -11,12 +12,21 @@ namespace TaoBank {
             var contas = new List<ContaCorrente>() {
                 new ContaCorrente(112, 1009),
                 new ContaCorrente(341, 99999),
+                null,
                 new ContaCorrente(341, 1001),
+                null,
                 new ContaCorrente(330, 10014),
+                null,
                 new ContaCorrente(112, 1008)
             };
             //contas.Sort();
-            contas.Sort(new ComparadorContaCorrentePorAgencia());
+            //contas.Sort(new ComparadorContaCorrentePorAgencia());
+
+            var listaSemNulos = new List<ContaCorrente>();
+
+            var contasOrdenadas = contas
+                .Where(contas => contas != null)
+                .OrderBy(conta => conta.Numero);
 
         }
 
